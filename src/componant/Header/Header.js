@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import UseFirebase from '../../Hook/UseFirebase';
+import UseAuth from '../../Context/UseAuth';
 import './Header.css';
 
 const Header = () => {
-    const {user,logOut}=UseFirebase()
+    const {user,logOut}=UseAuth()
     return (
  <div>
   <nav className="navbar navbar-expand-lg nav-back">
@@ -17,17 +17,25 @@ const Header = () => {
         <li className="nav-item">
           <NavLink to="/home" className="ankor ms-3">Home</NavLink>
         </li>
-
         <li className="nav-item">
-          <NavLink to="/contact" className="ankor ms-3">Contact Us</NavLink>
+          {user.email?<NavLink to="/myorder" className="ankor ms-3">My order</NavLink>:''}
+        
+        </li>
+        <li className="nav-item">
+          {user.email?<NavLink to="/manage" className="ankor ms-3">Manage All Order</NavLink>:''}
+        
+        </li>
+        <li className="nav-item">
+          {user.email?<NavLink to="/addservice" className="ankor ms-3">Add New Services</NavLink>:''}
+        
         </li>
 
         <li className="nav-item">
-               <span className="text-white ms-3 ankor">{user.displayName}</span>
-                { user.email?<button className="ms-3" onClick={logOut}>Sign out</button>:
+               
+                { user.email?<button className="ms-3 btn2" onClick={logOut}>Sign out</button>:
                 <NavLink className="ankor ms-3" to="/login">Login</NavLink>
-
                 }
+                <span className="text-white ms-2 ankor">{user.displayName}</span>
         </li>
      </ul>
     </div>

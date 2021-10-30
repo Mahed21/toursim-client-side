@@ -3,43 +3,36 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <div className="footer mt-3">
             <div className="container">
 
             
             <div className="row">
                 <div className="col-lg-4">
                  
-                        <h3>Information</h3>
-                        <br/>
-                        <h4>About us</h4>
-                        <h4>More Serarch</h4>
-                        <h4>Blog</h4>
-                        <h4>events</h4>
+                    <h3>Information</h3>
+                    <h5>About us</h5>
+                    <h5>More Serarch</h5>
+                    <h5>Blog</h5>
+                    <h5>events</h5>
                  </div>
                  <div className="col-lg-4">
                   <h3>Contact us</h3>
                   <br/>
-               
-                 <h4><i class="fas fa-envelope-open-text"></i> : mahed@255261@gmail.com</h4>
-                 <h4><i class="fas fa-phone-volume"></i> :01788432763245</h4>
-                 
+                   <h5><i class="fas fa-envelope-open-text"></i> : mahed@255261@gmail.com</h5>
+                 <h5><i class="fas fa-phone-volume"></i> :01788432763245</h5>
                  </div>
 
                  <div className="col-lg-4">
                   <h3>Address</h3>
-                  <br/>
-               
-                 <h4>First Floor, modubon market</h4>
-                 <h4> zindabazr, Sylhet</h4>
-               
-                 
+                  <h5>First Floor, modubon market</h5>
+                 <h5> zindabazr, Sylhet</h5>
                  </div>
 
             </div>
             </div>
             <hr/>
-           <div className=" pt-5 pb-1">
+           <div className=" pt-2 pb-1">
           <span className="d-flex justify-content-center">
            <i class="fab fa-facebook-square"></i>
            <i class="fab fa-instagram-square"></i>

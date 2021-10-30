@@ -1,10 +1,13 @@
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import './App.css';
+import AddServices from './componant/Add Services/AddServices';
 import Details from './componant/Details/Details';
 import Footer from './componant/Footer/Footer';
 import Header from './componant/Header/Header';
 import Home from './componant/Home/Home';
 import Login from './componant/Login/Login';
+import ManageAllOrder from './componant/ManageAllOrder/ManageAllOrder';
+import MyOrder from './componant/MyOrder/MyOrder';
 import PrivateRoute from './componant/PrivateRoute/PrivateRoute';
 import AuthProvider from './Context/AuthProvider';
 
@@ -24,8 +27,17 @@ function App() {
       <PrivateRoute path="/details/:tourId">
       <Details></Details>
       </PrivateRoute>
+     <Route path="/myorder">
+     <MyOrder></MyOrder>
+     </Route>
+     <Route path="/manage">
+     <ManageAllOrder></ManageAllOrder>
+     </Route>
+     <Route path="/addservice">
+      <AddServices></AddServices>
+     </Route>
 
-   </Switch>
+       </Switch>
    <Footer></Footer>
    </BrowserRouter>
    </AuthProvider>

@@ -9,13 +9,14 @@ const Services = (props) => {
             <div className="cols">
                 <div className="card">
                 <img src={img} alt="" className="img-fluid"/>
-                
-                <h4 className="ms-1">{name}</h4>
-                <h4 className="ms-1">Duraion: {duration}</h4>
-                <h4 className="ms-1">Total Cost :{cost}</h4>
-                <h4 className="ms-1">Date of Tours:{date}</h4>
-                <Link to={`/details/${_id}`}>
-               <button className="btn">CLick For More Detail</button>
+                <div>
+                <h5 className="ms-1">{name}</h5>
+                <h5 className="ms-1">Duraion: {duration}</h5>
+                <h5 className="ms-1">Total Cost :{cost}</h5>
+                <h5 className="ms-1"><i class="far fa-clock"></i> {date}</h5>
+                </div>
+                <Link to={`/details/${_id}`} className="mb-2 ms-1">
+               <button className="btn">Book Now</button>
                </Link>
                 
                 </div>

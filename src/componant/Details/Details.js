@@ -1,6 +1,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router';
+
+
 import UseAuth from '../../Context/UseAuth';
 import './Details.css'
 

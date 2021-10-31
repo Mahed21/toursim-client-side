@@ -1,5 +1,5 @@
 # website Name:Mac Tourism
-# To view the live site Click here [https://reverent-leavitt-638928.netlify.app/home]
+# To view the live site Click here [https://trusting-brattain-17aca3.netlify.app/login]
 
 ## About
 Mac tourism is a business organisation for tourist with safety and low of cost

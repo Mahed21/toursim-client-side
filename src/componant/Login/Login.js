@@ -8,11 +8,11 @@ const Login = () => {
     const {googleSignIn}=UseAuth()
     const location=useLocation();
     const history=useHistory();
-    console.log(location.state?.from );
     const redirect_uri=location.state?.from || '/home';
     const handleGoogle=()=>
     {
-        googleSignIn().then((result)=>
+        googleSignIn()
+        .then((result)=>
         {
             history.push(redirect_uri);
         })

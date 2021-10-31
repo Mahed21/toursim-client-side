@@ -13,9 +13,11 @@ import './Home.css';
 
 const Home = () => {
     const [product, setProduct]=useState([]);
+ 
     useEffect(()=>
     {
-        fetch('http://localhost:5000/products')
+       
+        fetch('https://scary-goblin-51715.herokuapp.com/products')
         .then(res=>res.json())
         .then(data=>setProduct(data));
     },[])
@@ -29,7 +31,7 @@ const Home = () => {
                 
                 <div className="pt-5 pb-5 line">
                   <h3 className="text-center">Mac tourism</h3>
-                  <p className="text-center">It is establish in 2018 in sylhet city.Its services is not only availabe
+                  <p className="text-center d">It is establish in 2018 in sylhet city.Its services is not only availabe
                      inside the division of sylhet.Initially it was only inside sylhet now it is available 
                      all over the country.
                      It is establish in 2018 in sylhet city.Its services is not only availabe
@@ -41,15 +43,21 @@ const Home = () => {
            
 
             {/* //banner part end */}
+
             {/* services part */}
             <div className="container mb-2 mt-2">
             <h3>Our Services</h3>
-            
-            <div class="row row-cols-1 row-cols-md-3 g-4">
             {
-                product.map(products=><Services products={products}></Services>)
+                !product.length?<div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+                </div>:
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+                  {
+                      product.map(products=><Services products={products} key={products._id}></Services>)
+                  }
+                  </div>
             }
-            </div>
+          
 
            
             </div>

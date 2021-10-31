@@ -17,7 +17,7 @@ const AddServices = () => {
        const date=dateRef.current.value;
        const newUser={name,img,cost,duration,date};
       
-       fetch('http://localhost:5000/products',{
+       fetch('https://scary-goblin-51715.herokuapp.com/products',{
            method:'POST',
            headers:{
                'content-type':'application/json'

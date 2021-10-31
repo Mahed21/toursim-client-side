@@ -5,7 +5,7 @@ const ManageAllOrder = () => {
     const [manageOrder, setManageOrder]=useState([]);
     useEffect(()=>
     {
-        fetch('http://localhost:5000/order')
+        fetch('https://scary-goblin-51715.herokuapp.com/order')
         .then(res=>res.json())
         .then(data=>setManageOrder(data));
     },[])
@@ -14,7 +14,7 @@ const ManageAllOrder = () => {
             <h1>All booked Data</h1>
             <div className="row row-cols-lg-2">
             {
-            manageOrder.map(manage=><DisplayManageOrder manage={manage}>
+            manageOrder.map(manage=><DisplayManageOrder manage={manage} key={manage._id}>
              </DisplayManageOrder>)}
              </div>
 

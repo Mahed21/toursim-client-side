@@ -5,7 +5,7 @@
     background-size: cover;
     background-position: center;
     color:white;
-    min-height: 100%;
+    min-height: 100vh;
    
 
 }
@@ -15,6 +15,7 @@ h3{
 .line
 {
     padding-top: 100px;
+
 }
 .heading
 {
